@@ -43,10 +43,11 @@ Or you can pull it from docker repository via
 docker pull shajoezhu/demo-mimic
 ```
 
-### run it
+### Deployment
 
 For the first time, we need to build the database
 
+```bash
 docker run -d \
 --name demo-mimic-container \
 -p 5433:5432 \
@@ -54,9 +55,16 @@ docker run -d \
 -e MIMIC_PASSWORD=mimic \
 -e BUILD_MIMIC=1 \
 demo-mimic
+```
 
-### To stop
+#### Stop deployment
+
+```bash
 docker stop demo-mimic-container
+```
 
-### To start again
+#### Restart deployment
+
+```bash
 docker start demo-mimic-container
+```
