@@ -2,7 +2,7 @@
 
 This repo is a git-sparse-checkout from https://github.com/MIT-LCP/mimic-code
 
-## Repo structure
+## Repo文件结构 (Repo structure)
 
 ```
   /   # Root
@@ -11,9 +11,9 @@ This repo is a git-sparse-checkout from https://github.com/MIT-LCP/mimic-code
   |-- docker   # Dockerfile etc
 ```
 
-## To build the database with postgres
+## SQL数据库构建 (Build the database with postgres)
 
-### Build
+### 构建数据库 (Build)
 
 ```bash
 cd postgres
@@ -23,29 +23,29 @@ make create-user
 make mimic-gz datadir="../data"
 ```
 
-### Test
+### 测试链接 (Test)
 
 ```bash
 psql "dbname=mimic user=postgres password=postgres options=--search_path=mimiciii" -v ON_ERROR_STOP=1 -f postgres_checks.sql
 ```
 
-## To build the database with docker
+## 用docker构建数据库 (Build the database with docker)
 
-### Build
+### 构建数据库
 
 ```bash
 docker build . -f docker/Dockerfile -t shajoezhu/demo-mimic
 ```
 
-Or you can pull it from docker repository via
+或者直接从docker库下载 (Or you can pull it from docker repository via)
 
 ```bash
 docker pull shajoezhu/demo-mimic
 ```
 
-### Deployment
+### Docker部署 (Deployment)
 
-For the first time, we need to build the database
+首次运行,需要组建数据库 (For the first time, we need to build the database)
 
 ```bash
 docker run -d \
@@ -57,13 +57,13 @@ docker run -d \
 demo-mimic
 ```
 
-#### Stop deployment
+#### 停止Docker部署 (Stop deployment)
 
 ```bash
 docker stop demo-mimic-container
 ```
 
-#### Restart deployment
+#### 重启Docker部署 (Restart deployment)
 
 ```bash
 docker start demo-mimic-container
