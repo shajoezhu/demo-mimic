@@ -1,14 +1,14 @@
 # demo-mimic
 
-This repo is sparse checked out from https://github.com/MIT-LCP/mimic-code
+This repo is a git-sparse-checkout from https://github.com/MIT-LCP/mimic-code
 
 ## Repo structure
 
 ```
-  /
-  |-- data
-  |-- postgres
-  |-- docker
+  /   # Root
+  |-- data     # mimic-demo data
+  |-- postgres # scripts for SQL database
+  |-- docker   # Dockerfile etc
 ```
 
 ## To build the database with postgres
