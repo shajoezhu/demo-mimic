@@ -54,7 +54,7 @@ docker run -d \
 -e POSTGRES_PASSWORD=postgres \
 -e MIMIC_PASSWORD=mimic \
 -e BUILD_MIMIC=1 \
-demo-mimic
+shajoezhu/demo-mimic
 ```
 
 #### 停止Docker部署 (Stop deployment)
